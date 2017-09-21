@@ -6,7 +6,7 @@
 - [ ] Install & Update Scripts
 - [ ] Plugin Manager
 - [ ] Class & Function Tags
-- [ ] Markdown Editing 
+- [ ] Markdown Editing
   - [ ] Block Editing
   - [ ] Highlighting
   - [ ] Linting
@@ -35,3 +35,11 @@
 - [ ] Copy Over Keymaps, and File Recognizers from Vim
 - [ ] Tmux integration
 - [ ] mvim
+
+## References
+- Good Sample Config [1][1]
+[1]: https://github.com/rafi/vim-config
+- NeoVim config locations [2][2]
+[2]: https://vi.stackexchange.com/questions/12579/windows-neovim-setup
+- nVim as IDE guide [3][3]
+[3]: http://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html
