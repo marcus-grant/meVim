@@ -2,10 +2,11 @@
 *My personal configurations for NeoVim, which by contrast to my vanilla vim config is a fully featured IDE for Python, Javascript, C++, Platform IO, Shell, Rust & Go*
 
 ## To-Do's
-- [ ] Bash Aliases "mevim"
-- [ ] Install & Update Scripts
+- [x] Install Script
+- [ ] Update Scripts
 - [ ] Plugin Manager
 - [ ] Class & Function Tags
+- [ ] Git editing ? *maybe better for lvim*
 - [ ] Markdown Editing
   - [ ] Block Editing
   - [ ] Highlighting
@@ -35,11 +36,13 @@
 - [ ] Copy Over Keymaps, and File Recognizers from Vim
 - [ ] Tmux integration
 - [ ] mvim
+- [ ] Bash Aliases "mevim"
 
 ## References
-- Good Sample Config [1][1]
+1. [Good Sample Config][1]
+2. [NeoVim config locations][2]
+3. [nVim as IDE guide][3]
+
 [1]: https://github.com/rafi/vim-config
-- NeoVim config locations [2][2]
 [2]: https://vi.stackexchange.com/questions/12579/windows-neovim-setup
-- nVim as IDE guide [3][3]
 [3]: http://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html
