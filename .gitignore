@@ -1,3 +1,6 @@
+#TODO: determine if /site is a good ignore (vimplug)
+*site/*
+
 # Build/deps dir
 /build/
 /dist/
