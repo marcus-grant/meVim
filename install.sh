@@ -41,6 +41,11 @@ function main() {
 	# link dotfile directory for neovim to $link_path
 	ln -s $dots_path $link_path
 
+	# download vim plug, and place it in ./autoload/
+	echo
+	echo "Downloading vim-plug (the plugin manager)"
+	get-vim-plug
+
 	# TODO: Other stuff
 
 
@@ -85,6 +90,11 @@ function is-dir() {
 	else
 		return 1
 	fi
+}
+
+function get-vim-plug() {
+	curl -fLo $dots_path/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 }
 
 
