@@ -4,6 +4,9 @@
 ## To-Do's
 - [x] Install Script
 - [x] Plugin Manager
+- [ ] Previous Vim settings
+  - [x] Disable search highlighting
+- [ ] Tmux integration
 - [ ] Markdown Editing
   - [ ] Block Editing
   - [ ] Highlighting
@@ -32,7 +35,6 @@
   - [ ] File & Local Autocomplete
   - [ ] RGB highlighting
 - [ ] Copy Over Keymaps, and File Recognizers from Vim
-- [ ] Tmux integration
 - [ ] Git editing ? *maybe better for lvim*
 - [ ] mvim
 - [ ] Update Scripts
