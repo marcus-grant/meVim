@@ -3,8 +3,8 @@
 
 ## To-Do's
 - [x] Install Script
+- [x] Plugin Manager
 - [ ] Update Scripts
-- [ ] Plugin Manager
 - [ ] Class & Function Tags
 - [ ] Git editing ? *maybe better for lvim*
 - [ ] Markdown Editing
