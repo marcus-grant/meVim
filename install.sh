@@ -92,10 +92,6 @@ function is-dir() {
 	fi
 }
 
-function get-vim-plug() {
-	curl -fLo $dots_path/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-}
 
 
 # main execution after reading in all functions - for forward declaration
