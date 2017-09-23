@@ -33,8 +33,8 @@ call plug#end()
 
 
 " load each config file in order
-"source ./general.vimrc
-"source ./plugins.vimrc
-"source ./keys.vimrc
-"source ./themes.vimrc
-"source ./line.vimrc
+"source ./configs/general.vimrc
+"source ./configs/plugins.vimrc
+"source ./configs/keys.vimrc
+"source ./configs/themes.vimrc
+"source ./configs/line.vimrc
