@@ -4,9 +4,6 @@
 ## To-Do's
 - [x] Install Script
 - [x] Plugin Manager
-- [ ] Update Scripts
-- [ ] Class & Function Tags
-- [ ] Git editing ? *maybe better for lvim*
 - [ ] Markdown Editing
   - [ ] Block Editing
   - [ ] Highlighting
@@ -14,6 +11,7 @@
   - [ ] External Renderer
   - [ ] Latex Blocks
   - [ ] Spell Check
+- [ ] Class & Function Tags
 - [ ] Python
   - [ ] Linting
   - [ ] External Running
@@ -35,7 +33,9 @@
   - [ ] RGB highlighting
 - [ ] Copy Over Keymaps, and File Recognizers from Vim
 - [ ] Tmux integration
+- [ ] Git editing ? *maybe better for lvim*
 - [ ] mvim
+- [ ] Update Scripts
 - [ ] Bash Aliases "mevim"
 
 ## References
