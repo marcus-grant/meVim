@@ -1,5 +1,8 @@
+# Vim-Plug directories, to be ignored
 #TODO: determine if /site is a good ignore (vimplug)
 *site/*
+*autoload/*
+*plugged/*
 
 # Build/deps dir
 /build/
