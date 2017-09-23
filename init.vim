@@ -20,11 +20,15 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall
 endif   
 
+" begin plugin list, NOTHING BUT PLUGINS UNTIL plug#end() call
 call plug#begin("./plugged")
 " Plugins list, ONLY USE SINGLE QUOTES for references
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" vim-tmux-navigator to integrate panes with tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 " Initialize plugin system
 call plug#end()
@@ -33,8 +37,8 @@ call plug#end()
 
 
 " load each config file in order
-"source ./configs/general.vimrc
-"source ./configs/plugins.vimrc
-"source ./configs/keys.vimrc
-"source ./configs/themes.vimrc
-"source ./configs/line.vimrc
+source general.vim
+"source plugins.vim
+"source keys.vim
+"source themes.vim
+"source line.vim
