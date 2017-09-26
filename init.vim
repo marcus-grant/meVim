@@ -16,12 +16,14 @@
 " - Avoid using standard Vim directory names like 'plugin'
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
-	silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	autocmd VimEnter * PlugInstall
-endif   
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
 
 " begin plugin list, NOTHING BUT PLUGINS UNTIL plug#end() call
-call plug#begin("./plugged")
+" TODO make this reference to the plugin folder dynamic based dotfile location
+call plug#begin("~/.config/nvim/plugged/")
 " Plugins list, ONLY USE SINGLE QUOTES for references
 
 " On-demand loading
@@ -37,8 +39,8 @@ call plug#end()
 
 
 " load each config file in order
-source general.vim
-"source plugins.vim
-"source keys.vim
-"source themes.vim
-"source line.vim
+so ~/.config/nvim/general.vim
+so ~/.config/nvim/plugins.vim
+so ~/.config/nvim/keys.vim
+"so themes.vim
+"so line.vim
