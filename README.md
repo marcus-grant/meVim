@@ -4,14 +4,27 @@
 ## Keymaps
 - Leader: `,`
 - Pane Controls
-	
 
 ## To-Do's
 - [x] Install Script
 - [x] Plugin Manager
 - [x] Tmux integration
-- [x] Sufficient Defaults
 - [x] Pane Management w/ Keymaps
+- [x] Sufficient Defaults
+  - [ ] Insert/Remove newlines from outside editor
+- [ ] Javascript
+  - [ ] JSX recognition
+  - [ ] Babel autocomplete
+  - [ ] Babel linting
+  - [ ] EditorConfigs
+  - [ ] Proper Spacing
+  - [ ] Emmet configs for JSX
+  - [ ] Local & Import Autocomplete
+- [ ] HTML & CSS
+  - [ ] Emmet & Keymaps
+  - [ ] Tag Surrounds
+  - [ ] File & Local Autocomplete
+  - [ ] RGB highlighting
 - [ ] Markdown Editing
   - [ ] Block Editing
   - [ ] Highlighting
@@ -27,19 +40,6 @@
   - [ ] Beautify
   - [ ] Autocomplete
   - [ ] Horiz Ruler
-- [ ] Javascript
-  - [ ] JSX recognition
-  - [ ] Babel autocomplete
-  - [ ] Babel linting
-  - [ ] EditorConfigs
-  - [ ] Proper Spacing
-  - [ ] Emmet configs for JSX
-  - [ ] Local & Import Autocomplete
-- [ ] HTML & CSS
-  - [ ] Emmet & Keymaps
-  - [ ] Tag Surrounds
-  - [ ] File & Local Autocomplete
-  - [ ] RGB highlighting
 - [ ] Copy Over Keymaps, and File Recognizers from Vim
 - [ ] Previous Vim settings
 - [ ] Git editing ? *maybe better for lvim*
