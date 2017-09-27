@@ -32,15 +32,18 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " vim-tmux-navigator to integrate panes with tmux
 Plug 'christoomey/vim-tmux-navigator'
 
+" deoplete autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+
 " Initialize plugin system
 call plug#end()
 
 
-
-
 " load each config file in order
-so ~/.config/nvim/general.vim
-so ~/.config/nvim/plugins.vim
-so ~/.config/nvim/keys.vim
-"so themes.vim
+so $HOME/.config/nvim/general.vim
+so $HOME/.config/nvim/keys.vim
+so $HOME/.config/nvim/plugins.vim
+so $HOME/.config/nvim/theme.vim
+so $HOME/.config/nvim/appearance.vim
 "so line.vim
