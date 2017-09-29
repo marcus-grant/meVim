@@ -35,6 +35,8 @@ Plug 'christoomey/vim-tmux-navigator'
 " deoplete autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" NERD commenter for better filetype comments
+Plug 'scrooloose/nerdcommenter'
 
 " Initialize plugin system
 call plug#end()
