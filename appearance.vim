@@ -32,3 +32,13 @@ let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr=''
 " include buffer number (BN:)
 let g:airline_section_y = 'BN: %{bufnr("%")}'
+
+
+" time-based color settings (change @ 5p 1700)
+" ----------------------------------------------------------
+set background=dark
+if strftime("%H") > 6
+  if strftime("%H") < 17
+    set background=light
+  endif
+endif
