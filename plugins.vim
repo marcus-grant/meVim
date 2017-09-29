@@ -18,3 +18,18 @@ let g:deoplete#enable_at_startup = 1
 " Autocmd to conditionally enable deoplete using tab, c-n and ...?
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" NERDCommenter
+" ----------------------------------------------------------
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" Use compact syntax for prettified multiline comments
+let g:NERDCompactSexyComs = 1
+" Align linewise comment delimiters flush left instead of following indents
+let g:NERDDefaultAlign = 'left'
+" Allow commenting and inverting empty lines (useful for commenting regions)
+let g:NERDCommentEmptyLines = 1
+" Trim trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+
