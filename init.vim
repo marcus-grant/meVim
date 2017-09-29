@@ -37,6 +37,10 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " NERD commenter for better filetype comments
 Plug 'scrooloose/nerdcommenter'
+"
+" airline statusbar HUD
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Initialize plugin system
 call plug#end()
@@ -46,6 +50,6 @@ call plug#end()
 so $HOME/.config/nvim/general.vim
 so $HOME/.config/nvim/keys.vim
 so $HOME/.config/nvim/plugins.vim
-so $HOME/.config/nvim/theme.vim
+" so $HOME/.config/nvim/theme.vim
 so $HOME/.config/nvim/appearance.vim
 "so line.vim

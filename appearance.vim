@@ -5,6 +5,9 @@
 " TODO: Implement more stuff from this http://bit.ly/2fxEW5T
 set termguicolors
 
+" TODO: Figure out way to set local theme seperate from git-tracked settings
+colorscheme PaperColor
+
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
@@ -21,4 +24,21 @@ if (empty($TMUX))
   endif
 endif
 
+" airline congigs
+" ----------------------------------------------------------
+" change maxlinenr to nothing because I can't find unicode 0133 (3310?)
+" TODO: remove maxlinenr
+let g:airline_symbols = get(g:,'airline_symbols',{})
+let g:airline_symbols.maxlinenr=''
+" include buffer number (BN:)
+let g:airline_section_y = 'BN: %{bufnr("%")}'
 
+
+" time-based color settings (change @ 5p 1700)
+" ----------------------------------------------------------
+set background=dark
+if strftime("%H") > 6
+  if strftime("%H") < 17
+    set background=light
+  endif
+endif
