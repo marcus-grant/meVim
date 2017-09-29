@@ -35,6 +35,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " deoplete autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" airline statusbar HUD
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 
 " Initialize plugin system
 call plug#end()
@@ -44,6 +48,6 @@ call plug#end()
 so $HOME/.config/nvim/general.vim
 so $HOME/.config/nvim/keys.vim
 so $HOME/.config/nvim/plugins.vim
-so $HOME/.config/nvim/theme.vim
+" so $HOME/.config/nvim/theme.vim
 so $HOME/.config/nvim/appearance.vim
 "so line.vim

@@ -18,3 +18,12 @@ let g:deoplete#enable_at_startup = 1
 " Autocmd to conditionally enable deoplete using tab, c-n and ...?
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+
+" Deoplete
+" ----------------------------------------------------------
+"  Non-display airline settings
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
