@@ -26,4 +26,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+" Check for OS type, if mac then set python path
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
