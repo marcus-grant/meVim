@@ -9,6 +9,7 @@ set ruler		" show ruler
 "set number		" show line numbers
 
 " considered superior to smartindent: http://bit.ly/2y03n3x
+filetype plugin on
 filetype plugin indent on
 "set smartindent     " chose which setting based off file
 set expandtab		" insert spaces when TAB is pressed
