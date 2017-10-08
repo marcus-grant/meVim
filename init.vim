@@ -39,6 +39,12 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Improved JS & JSX support
+" load only for *.js & *.jsx extensions
+" TODO: accomplish some kind of lazy loading for this plugin for JS & JSX
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 
 " Initialize plugin system
 call plug#end()

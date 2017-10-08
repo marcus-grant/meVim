@@ -29,3 +29,5 @@ set smartcase		" ...UNLESS the query has capital letters within it
 set gdefault		" use 'g' flag by default with :s/foo/bar/
 set magic		" use 'magic' patterns (regex extensions)
 
+" set default fold level to unfolded
+set foldlevel=99
