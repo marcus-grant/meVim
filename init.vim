@@ -35,6 +35,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " deoplete autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
+" NERD commenter for better filetype comments
+Plug 'scrooloose/nerdcommenter'
+"
 " airline statusbar HUD
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -44,7 +47,6 @@ Plug 'vim-airline/vim-airline-themes'
 " TODO: accomplish some kind of lazy loading for this plugin for JS & JSX
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-
 
 " Initialize plugin system
 call plug#end()
