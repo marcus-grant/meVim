@@ -27,3 +27,15 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
+" vim-javascript & vim-jsx
+" syntax highlighting for jsdocs
+let g:javascript_plugin_jsdoc = 1
+" enable working with flow
+let g:javascript_plugin_flow = 1
+" code folding based on syntax file of plugin
+set foldmethod=syntax
+" for jsx....
+" enable jsx handling of js extension as well
+let g:jsx_ext_required = 0
+
+
