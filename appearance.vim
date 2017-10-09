@@ -42,3 +42,5 @@ if strftime("%H") > 6
     set background=light
   endif
 endif
+
+set guicursor=n-v-c:block-Cursor
