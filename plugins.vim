@@ -11,6 +11,17 @@ let NERDTreeQuitOnOpen=1
 nnoremap <leader>t :NERDTree<CR>:NERDTreeFocus<CR>
 nnoremap <leader>T :NERDTreeFocus<CR>
 
+" ALE Linting options : http://bit.ly/2wY3Kr3
+" ----------------------------------------------------------
+" enable filetypes using the associated linting program
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\}
+" lint on saves
+let g:ale_fix_on_save = 1
+" TODO: test with flow on non typescript
+" let g:ale_completion_enabled = 1
+
 
 " Deoplete
 " ----------------------------------------------------------
