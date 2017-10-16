@@ -48,6 +48,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" ALE - Asynchronous Lint Engine
+Plug 'w0rp/ale'
+
 " Initialize plugin system
 call plug#end()
 
