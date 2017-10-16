@@ -32,6 +32,9 @@ let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr=''
 " include buffer number (BN:)
 let g:airline_section_y = 'BN: %{bufnr("%")}'
+" this comes from w0rp/ale linter to show error/warnings in status line
+let g:airline#extensions#ale#enabled = 1
+
 
 
 " time-based color settings (change @ 5p 1700)
