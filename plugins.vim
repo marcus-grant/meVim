@@ -13,10 +13,15 @@ nnoremap <leader>T :NERDTreeFocus<CR>
 
 " ALE Linting options : http://bit.ly/2wY3Kr3
 " ----------------------------------------------------------
+"  linters
+let g:ale_linters = {
+\  'javascript': ['eslint'],
+\}
 " enable filetypes using the associated linting program
 " Recently changed to test if using npx enforces local linters instead of global
 let g:ale_fixers = {
 \   'javascript': ['npx eslint'],
+\   'javascript.jsx': ['npx eslint'],
 \}
 " lint on saves
 let g:ale_fix_on_save = 1
