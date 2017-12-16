@@ -20,8 +20,8 @@ let g:ale_linters = {
 " enable filetypes using the associated linting program
 " Recently changed to test if using npx enforces local linters instead of global
 let g:ale_fixers = {
-\   'javascript': ['npx eslint'],
-\   'javascript.jsx': ['npx eslint'],
+\   'javascript': ['eslint'],
+\   'javascript.jsx': ['eslint'],
 \}
 " lint on saves
 let g:ale_fix_on_save = 1
