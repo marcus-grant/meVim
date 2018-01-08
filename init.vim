@@ -51,6 +51,14 @@ Plug 'mxw/vim-jsx'
 " ALE - Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
+" Vim-git - syntax highlighting for git integrators
+" TODO: Find out if there's a good on-demand way to load this
+Plug 'tpope/vim-git'
+
+" fuGITive - Best git wrapper ever
+" TODO: Find out if there's a good on-demand way to load this
+Plug 'tpope/vim-fugitive'
+
 " Initialize plugin system
 call plug#end()
 
