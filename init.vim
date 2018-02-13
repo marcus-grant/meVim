@@ -59,6 +59,19 @@ Plug 'tpope/vim-git'
 " TODO: Find out if there's a good on-demand way to load this
 Plug 'tpope/vim-fugitive'
 
+" euclio/vim-markdown-composer a rust-based web server that live-renders markdown
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+
 " Initialize plugin system
 call plug#end()
 

@@ -1,11 +1,56 @@
-# meVim
+meVim
+=====
 *My personal configurations for NeoVim, which by contrast to my vanilla vim config is a fully featured IDE for Python, Javascript, C++, Platform IO, Shell, Rust & Go*
 
-## Keymaps
+Keymaps
+-------
 - Leader: `,`
 - Pane Controls
 
-## To-Do's
+Markdown Editing
+----------------
+### Vim Markdown Composer
+A plugin that uses the Rust framework **Aurelius** to live-render markdown into a local server. It requires rust install, which can be done by entering this command into the command line, `curl https://sh.rustup.rs -sSf | sh`. Then it's installed into this configuration by entering into the `init.vim` file, this snippet of code below.
+```viml
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+```
+
+There are various configurations that are unfortunately only written down into the help file, which is accessible from the vim command, `help markdown-composer`. The default local route to this page is [`http://[::1]:40447/`](http://[::1]:40447/)
+
+#### Markdown Composer Options
+* `g:markdown_composer_browser`: Specifies a browser for the plugin to use, if not specified, it will use the default.
+* `g:markdown_composer_open_browser`: If set to `0`, then the plugin won't attempt to open the user's specified browser, requiring the user to open it to the local address manually
+* `g:markdown_composer_external_renderer`: This allows an external command to be run by the server to render.
+  * It does so by sending out text through **stdout** into the command, then back using **stdin**
+  * Since doing this externally is slower than with the regular renderer, refresh rates might need to be altered
+  * Ex: `let g:markdown_composer_external_renderer='pandoc -f markdown -t html'`
+    * This uses the infamous `pandoc` to handle external rendering
+* `g:markdown_composer_refresh_rate`: The rate in ms that new markdown should be sent from the buffer to the server, defaults *(0)* to every keystroke
+* `g:markdown_composer_syntax_theme`: The theme that gets used to render code blocks with syntax highlighting
+  * More info [here](https://highlightjs.org/static/demo/)
+  * Variable should be set by the CSS file's path minus the `*.css` extension
+  * The default is Github's style
+* `g:markdown_composer_autostart`: Whether the server should start automatically whenever a markdown buffer is opened
+  * Defaults to `1`, ie yes
+* `g:markdown_composer_custom_css`: A list of custom CSS URIs that should be loaded instead of the Github Styles
+  * Can be local paths and URLs
+  * **NOTE** they **must** use absolute and prefixed schemes like so: `file:///home/euclio/markdown.css`
+
+ 
+
+
+To-Do's
+-------
 - [x] Install Script
 - [x] Plugin Manager
 - [x] Tmux integration
@@ -49,20 +94,22 @@
 - [ ] Improve portability with xdg & dynamic filepaths: [link][100]
 
 ## References
-1. [Good Sample Config][1]
-2. [NeoVim config locations][2]
-3. [nVim as IDE guide][3]
-4. [r/neovim: neoVim JSX suggestions][4]
-5. [Thoughtbot: tmux copy & paste][5]
-6. [Medium(Victor Mourns): A better NERDTree Setup][6]
-7. [Thoughtbot: Vim Splits][7]
+1. [Good Sample Config][01]
+2. [NeoVim config locations][02]
+3. [nVim as IDE guide][03]
+4. [r/neovim: neoVim JSX suggestions][04]
+5. [Thoughtbot: tmux copy & paste][05]
+6. [Medium(Victor Mourns): A better NERDTree Setup][06]
+7. [Thoughtbot: Vim Splits][07]
+8. [Github: euclio/vim-markdown-composer][08]
 
-[1]: http://bit.ly/2hoq9HF
-[2]: http://bit.ly/2xoPJnm
-[3]: http://bit.ly/2wI2bS6
-[4]: http://bit.ly/2jUHA7h
-[5]: http://bit.ly/2jRaGnL
-[6]: http://bit.ly/2xZ9FAx
-[7]: http://bit.ly/2y01Avj
+[01]: http://bit.ly/2hoq9HF
+[02]: http://bit.ly/2xoPJnm
+[03]: http://bit.ly/2wI2bS6
+[04]: http://bit.ly/2jUHA7h
+[05]: http://bit.ly/2jRaGnL
+[06]: http://bit.ly/2xZ9FAx
+[07]: http://bit.ly/2y01Avj
+[08]: https://github.com/euclio/vim-markdown-composer "Github: euclio/vim-markdown-composer"
 
 [100]: http://bit.ly/2y0UkPU

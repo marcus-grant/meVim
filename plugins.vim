@@ -80,3 +80,8 @@ set foldmethod=syntax
 " enable jsx handling of js extension as well
 let g:jsx_ext_required = 0
 
+" vim-markdown-composer
+" ---------------------
+"  Turn off automatic opening of the specified browser
+let g:markdown_composer_open_browser = 0
+
