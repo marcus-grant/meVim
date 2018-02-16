@@ -64,6 +64,7 @@ To-Do's
   * [ ] noh binding, using leader key and/or defaults for substitutions to disable this
   * [ ] fuzzy finder
   * [ ] indentation grids
+  * [ ] Basic neovim terminal keymaps, like [this][11] maybe?
     * just use a light `|` character
   * [ ] Insert/Remove newlines from outside editor
 * [ ] Javascript
@@ -141,6 +142,7 @@ To-Do's
 8. [Github: euclio/vim-markdown-composer][08]
 9. [Hackernoon: Go & NeoVim][09]
 10. [Github: calitux/deoplete-ternjs][10]
+11. [Jacques Visser (Medium): Neovim Has a Built-In Terminal Emulator?!][11]
 
 [01]: http://bit.ly/2hoq9HF
 [02]: http://bit.ly/2xoPJnm
@@ -152,5 +154,6 @@ To-Do's
 [08]: https://github.com/euclio/vim-markdown-composer "Github: euclio/vim-markdown-composer"
 [09]: https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876 "Hackernoon: Go & NeoVim"
 [10]: https://github.com/carlitux/deoplete-ternjs "Github: calitux/deoplete-ternjs"
+[11]: https://medium.com/@jcqvisser/neovim-has-a-built-in-terminal-emulator-cf057f767dbc "Jacques Visser (Medium): Neovim Has a Built-In Terminal Emulator?!"
 
 [100]: http://bit.ly/2y0UkPU
