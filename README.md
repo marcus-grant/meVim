@@ -4,8 +4,8 @@ meVim
 
 Keymaps
 -------
-- Leader: `,`
-- Pane Controls
+* Leader: `,`
+* Pane Controls
 
 Markdown Editing
 ----------------
@@ -51,47 +51,80 @@ There are various configurations that are unfortunately only written down into t
 
 To-Do's
 -------
-- [x] Install Script
-- [x] Plugin Manager
-- [x] Tmux integration
-- [x] Pane Management w/ Keymaps
-- [x] Sufficient Defaults
-  - [ ] Insert/Remove newlines from outside editor
-- [ ] Javascript
-  - [ ] JSX recognition
-  - [ ] Babel autocomplete
-  - [ ] Babel linting
-  - [ ] EditorConfigs
-  - [ ] Proper Spacing
-  - [ ] Emmet configs for JSX
-  - [ ] Local & Import Autocomplete
-- [ ] HTML & CSS
-  - [ ] Emmet & Keymaps
-  - [ ] Tag Surrounds
-  - [ ] File & Local Autocomplete
-  - [ ] RGB highlighting
-- [ ] Markdown Editing
-  - [ ] Block Editing
-  - [ ] Highlighting
-  - [ ] Linting
-  - [ ] External Renderer
-  - [ ] Latex Blocks
-  - [ ] Spell Check
-- [ ] Class & Function Tags
-- [ ] FuzzyFinder with Keymaps
-- [ ] Python
-  - [ ] Linting
-  - [ ] External Running
-  - [ ] Beautify
-  - [ ] Autocomplete
-  - [ ] Horiz Ruler
-- [ ] Copy Over Keymaps, and File Recognizers from Vim
-- [ ] Previous Vim settings
-- [ ] Git editing ? *maybe better for lvim*
-- [ ] mvim
-- [ ] Update Scripts
-- [ ] Bash Aliases "mevim"
-- [ ] Improve portability with xdg & dynamic filepaths: [link][100]
+* Miscellaneous
+  * [x] Install Script
+  * [x] Plugin Manager
+  * [x] Tmux integration
+  * [x] Pane Management w/ Keymaps
+  * [x] Sufficient Defaults
+  * [ ] noh binding, using leader key and/or defaults for substitutions to disable this
+  * [ ] fuzzy finder
+  * [ ] indentation grids
+    * just use a light `|` character
+  * [ ] Insert/Remove newlines from outside editor
+* [ ] Javascript
+  * [x] Proper Spacing
+    * handled by `vim-jsx` & `vim-javascript`
+  * [x] JSX recognition
+  * [ ] ternjs with deoplete
+  * [ ] graphQL highlighting
+  * [ ] Snippets
+  * [ ] JSDocs
+    * [ ] `vim-jsdoc`
+  * [ ] Function parameter completion
+    * [ ] `jspc.vim`?
+  * [ ] CTags support
+    * consider `ramitos/jsctags`
+  * [ ] EditorConfigs
+  * [ ] Emmet configs for JSX
+  * [ ] Local & Import Autocomplete
+* [ ] HTML & CSS
+  * [ ] Emmet & Keymaps
+  * [ ] Tag Surrounds
+  * [ ] File & Local Autocomplete
+  * [ ] RGB highlighting
+* [ ] Markdown Editing
+  * [x] External Renderer
+    * Handled by `vim-markdown-composer`
+  * [ ] Pandoc Integration
+  * [ ] Auto fold h2 & lower
+  * [ ] Block Editing
+  * [ ] Highlighting
+  * [ ] Linting Grammar & Spelling *(write-good?)*
+  * [ ] Latex Blocks
+  * [ ] Ctags integration?
+  * [ ] Automatic references link or bibilography
+  * [ ] Better moving through large blocks of text
+    * Perhaps using hard/soft wraps?
+    * Perhaps using block focusing, where only one block is seen by choice
+    * Should have some keymaps to better move through a block
+  * [ ] Some kind of *org-mode*-like features
+    * Perhaps `vim-wiki`
+    * concealer syntaxes for markdown
+  * [ ] Prose focused writing mode, *(think iA writer)*
+  * [ ] Dictionary & Thesaurus features
+* Go
+  * [ ] Linting
+  * [ ] Autocompletion
+  * [ ] Basic doctype plugin
+  * [ ] Style & config defaults, use [this][09] as a guide
+  * [ ] NeoSnippet
+  * [ ] `delve` for debugging
+* [ ] Class & Function Tags
+* [ ] FuzzyFinder with Keymaps
+* [ ] Python
+  * [ ] Linting
+  * [ ] External Running
+  * [ ] Beautify
+  * [ ] Autocomplete
+  * [ ] Horiz Ruler
+* [ ] Copy Over Keymaps, and File Recognizers from Vim
+* [ ] Previous Vim settings
+* [ ] Git editing ? *maybe better for lvim*
+* [ ] mvim
+* [ ] Update Scripts
+* [ ] Bash Aliases "mevim"
+* [ ] Improve portability with xdg & dynamic filepaths: [link][100]
 
 ## References
 1. [Good Sample Config][01]
@@ -102,6 +135,8 @@ To-Do's
 6. [Medium(Victor Mourns): A better NERDTree Setup][06]
 7. [Thoughtbot: Vim Splits][07]
 8. [Github: euclio/vim-markdown-composer][08]
+9. [Hackernoon: Go & NeoVim][09]
+10. [Github: calitux/deoplete-ternjs][10]
 
 [01]: http://bit.ly/2hoq9HF
 [02]: http://bit.ly/2xoPJnm
@@ -111,5 +146,7 @@ To-Do's
 [06]: http://bit.ly/2xZ9FAx
 [07]: http://bit.ly/2y01Avj
 [08]: https://github.com/euclio/vim-markdown-composer "Github: euclio/vim-markdown-composer"
+[09]: https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876 "Hackernoon: Go & NeoVim"
+[10]: https://github.com/carlitux/deoplete-ternjs "Github: calitux/deoplete-ternjs"
 
 [100]: http://bit.ly/2y0UkPU
