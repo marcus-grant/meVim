@@ -1,11 +1,25 @@
 meVim
 =====
+
 *My personal configurations for NeoVim, which by contrast to my vanilla vim config is a fully featured IDE for Python, Javascript, C++, Platform IO, Shell, Rust & Go*
 
 Keymaps
 -------
+
 * Leader: `,`
+  * `<leader>l`: Toggle `vim-javascript` concealing features
 * Pane Controls
+
+
+Folding
+-------
+
+- Here's a good place to go over how to change settings based on filetype
+  - This snippet sets `foldmethod=marker` based on filetypes
+  - `autocmd BufRead,BufNewFile   *.c,*.h,*.java set noic cin noexpandtab`
+
+
+
 
 Markdown Editing
 ----------------
@@ -48,6 +62,30 @@ There are various configurations that are unfortunately only written down into t
 
 Javascript
 ----------
+### `Vim-Javascript`
+* There are **concealing** features embedded that can make code look nice, but crucially make code shorter when editing in neovim
+* Below is an example config that is currently placed in `plugins.vim`
+
+```viml
+set conceallevel=1
+map <leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "⇒"
+let g:javascript_conceal_underscore_arrow_function = "⇒"
+```
+* On top of setting concealing characters, it turns concealing on with `set conceallevel=1`
+* Then there's a keymap that toggles JS concealment `<leader>l`
+
+
 ### TernJS
 
  
@@ -59,17 +97,31 @@ To-Do's
   * [x] Install Script
   * [x] Plugin Manager
   * [x] Tmux integration
+  * [x] NERDTree
   * [x] Pane Management w/ Keymaps
   * [x] Sufficient Defaults
+  * [x] `foldmethod=marker` for vim & sh
+  * [ ] Better folding techniques
+    * A good [guide][11]
   * [ ] noh binding, using leader key and/or defaults for substitutions to disable this
+  * [ ] Class & Function Tags
+  * [ ] Copy Over Keymaps, and File Recognizers from Vim
+  * [ ] Previous Vim settings
+  * [ ] Git editing ? *maybe better for lvim*
+  * [ ] mvim
+  * [ ] Update Scripts
+  * [ ] Bash Aliases "mevim"
+  * [ ] Improve portability with xdg & dynamic filepaths: [link][100]
+* FuzzyFinder with Keymaps
   * [ ] fuzzy finder
   * [ ] indentation grids
     * just use a light `|` character
   * [ ] Insert/Remove newlines from outside editor
-* [ ] Javascript
-  * [x] Proper Spacing
+* Javascript
+  * [x] Proper Syntax & Spacing
     * handled by `vim-jsx` & `vim-javascript`
   * [x] JSX recognition
+  * [ ] Folding 
   * [ ] ternjs with deoplete
   * [ ] graphQL highlighting
   * [ ] Snippets
@@ -82,15 +134,16 @@ To-Do's
   * [ ] EditorConfigs
   * [ ] Emmet configs for JSX
   * [ ] Local & Import Autocomplete
-* [ ] HTML & CSS
+* HTML & CSS
   * [ ] Emmet & Keymaps
   * [ ] Tag Surrounds
   * [ ] File & Local Autocomplete
   * [ ] RGB highlighting
-* [ ] Markdown Editing
+* Markdown
   * [x] External Renderer
     * Handled by `vim-markdown-composer`
   * [ ] Pandoc Integration
+  * [ ] Concealer options
   * [ ] Auto fold h2 & lower
   * [ ] Block Editing
   * [ ] Highlighting
@@ -114,43 +167,43 @@ To-Do's
   * [ ] Style & config defaults, use [this][09] as a guide
   * [ ] NeoSnippet
   * [ ] `delve` for debugging
-* [ ] Class & Function Tags
-* [ ] FuzzyFinder with Keymaps
-* [ ] Python
+* Python
   * [ ] Linting
   * [ ] External Running
   * [ ] Beautify
   * [ ] Autocomplete
   * [ ] Horiz Ruler
-* [ ] Copy Over Keymaps, and File Recognizers from Vim
-* [ ] Previous Vim settings
-* [ ] Git editing ? *maybe better for lvim*
-* [ ] mvim
-* [ ] Update Scripts
-* [ ] Bash Aliases "mevim"
-* [ ] Improve portability with xdg & dynamic filepaths: [link][100]
+* Appearance
+  * [x] fix `PaperColor` highlighting for conceals
+    * handled by chancing `Conceal` option in `colors/PaperColor.vim`
+  * [ ] `ayu.vim`
+  * [ ] General concealers
+    * [ ] const/var/let
 
 ## References
-1. [Good Sample Config][01]
-2. [NeoVim config locations][02]
-3. [nVim as IDE guide][03]
-4. [r/neovim: neoVim JSX suggestions][04]
-5. [Thoughtbot: tmux copy & paste][05]
+1. [Github/rafi/vim-config: A good example of a config][01]
+2. [vi.stackexchange: Windows Neovim Setup (config location hierarchy)][02]
+3. [CoderOnCode: Vim is the Perfect IDE][03]
+4. [r/neovim: neovim JSX Suggestions][04]
+5. [Thoughtbot: tmux Copy & Paste on OS X: A Better Future][05]
 6. [Medium(Victor Mourns): A better NERDTree Setup][06]
-7. [Thoughtbot: Vim Splits][07]
+7. [Thoughtbot: Vim Splits - Move Faster & More Naturally][07]
 8. [Github: euclio/vim-markdown-composer][08]
 9. [Hackernoon: Go & NeoVim][09]
 10. [Github: calitux/deoplete-ternjs][10]
+11. [Steve Losh - Advanced Folding][11]
 
-[01]: http://bit.ly/2hoq9HF
-[02]: http://bit.ly/2xoPJnm
-[03]: http://bit.ly/2wI2bS6
-[04]: http://bit.ly/2jUHA7h
-[05]: http://bit.ly/2jRaGnL
-[06]: http://bit.ly/2xZ9FAx
-[07]: http://bit.ly/2y01Avj
+
+[01]: https://github.com/rafi/vim-config "Github/rafi/vim-config: A good example of a config"
+[02]: https://vi.stackexchange.com/questions/12579/windows-neovim-setup "vi.stackexchange: Windows Neovim Setup (Used for config location hierarchy)"
+[03]: http://coderoncode.com/tools/2017/04/16/vim-the-perfect-ide.html "CoderOnCode: Vim is the Perfect IDE"
+[04]: https://www.reddit.com/r/neovim/comments/4jxx4d/neomake_and_jsx/?st=j7wwkj76&sh=22574b55 "r/neovim: neovim JSX Suggestions"
+[05]: https://robots.thoughtbot.com/tmux-copy-paste-on-os-x-a-better-future "Thoughtbot: tmux Copy & Paste on OS X: A Better Future"
+[06]: https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9 "Medium(Victor Mourns): A better NERDTree Setup"
+[07]: https://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally "Thoughtbot: Vim Splits - Move Faster & More Naturally"
 [08]: https://github.com/euclio/vim-markdown-composer "Github: euclio/vim-markdown-composer"
 [09]: https://hackernoon.com/my-neovim-setup-for-go-7f7b6e805876 "Hackernoon: Go & NeoVim"
 [10]: https://github.com/carlitux/deoplete-ternjs "Github: calitux/deoplete-ternjs"
+[11]: http://learnvimscriptthehardway.stevelosh.com/chapters/49.html "Steve Losh - Advanced Folding"
 
 [100]: http://bit.ly/2y0UkPU
