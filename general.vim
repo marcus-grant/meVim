@@ -30,5 +30,10 @@ set smartcase		" ...UNLESS the query has capital letters within it
 set gdefault		" use 'g' flag by default with :s/foo/bar/
 set magic		" use 'magic' patterns (regex extensions)
 
+" fold settings{{{
 " set default fold level to unfolded
 set foldlevel=99
+
+" specify foldmethod by filetype
+autocmd BufRead,BufNewFile   *.sh,*.vim set foldmethod=marker
+"}}}

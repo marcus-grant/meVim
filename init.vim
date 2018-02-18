@@ -42,6 +42,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" fzf
+Plug '~/.fzf'
+
 " Improved JS & JSX support
 " load only for *.js & *.jsx extensions
 " TODO: accomplish some kind of lazy loading for this plugin for JS & JSX
